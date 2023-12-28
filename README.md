@@ -2,6 +2,8 @@
 
 I created the `docker-compose.yaml` file using [this tutorial](https://www.mongodb.com/compatibility/deploying-a-mongodb-cluster-with-docker)
 
+Set the version of mongodb to the one you want in the `.env` file.
+
 Start the containers and networking:
 ```shell
 $ docker compose up -d

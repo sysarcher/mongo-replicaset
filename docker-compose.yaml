@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   mongo1:
-    image: mongo:5
+    image: mongo:$VERSION
     container_name: mongo1
     ports:
       - '27017:27017'
@@ -9,7 +9,7 @@ services:
       - mongoCluster
     entrypoint: 'mongod --replSet myReplicaSet --bind_ip localhost,mongo1'
   mongo2:
-    image: mongo:5
+    image: mongo:$VERSION
     container_name: mongo2
     ports:
       - '27018:27017'
@@ -17,7 +17,7 @@ services:
       - mongoCluster
     entrypoint: 'mongod --replSet myReplicaSet --bind_ip localhost,mongo2'
   mongo3:
-    image: mongo:5
+    image: mongo:$VERSION
     container_name: mongo3
     ports:
       - '27019:27017'
